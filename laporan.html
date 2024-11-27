@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inknut Antiqua", serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        /* Sidebar dan Header (Tetap seperti aslinya) */
+        .sidebar {
+            width: 20%;
+            background-color: #2f6c2f;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .logo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar .menu li {
+            margin-left: 50px;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ffffff; /* Garis di bawah menu */
+            width: 200px;
+            cursor: pointer;
+        }
+
+        .sidebar .menu li:hover {
+            background-color: #3f7d3f;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+
+        .header {
+            background-color: #2f6c2f;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Bagian Form Laporan */
+        .form-container {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #2f6c2f;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            width: 60%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #2f6c2f;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #2f6c2f;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 20%;
+            padding: 10px;
+            background-color: #2f6c2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #3f7d3f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="img/icon.jpeg" alt="SmartFarm Icon">
+            </div>
+            <ul class="menu">
+                <li>Pendataan</li>
+                <li>Penandaan</li>
+                <li>Kesehatan</li>
+                <li>Laporan</li>
+                <li>Tentang</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">LAPORAN</div>
+
+            <!-- Form Laporan -->
+            <div class="form-container">
+                <h2>Buat Laporan</h2>
+                <form>
+                    <label for="tanggal-lama">Tanggal Lama</label>
+                    <input type="date" id="tanggal-lama" name="tanggal-lama">
+
+                    <label for="tanggal-baru">Tanggal Diperbarui</label>
+                    <input type="date" id="tanggal-baru" name="tanggal-baru">
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

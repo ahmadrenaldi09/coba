@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendataan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inknut Antiqua", serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 20%;
+            background-color: #2f6c2f;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .logo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar .menu li {
+            margin-left: 50px;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ffffff;
+            width: 200px;
+            cursor: pointer;
+        }
+
+        .sidebar .menu li:hover {
+            background-color: #3f7d3f;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+
+        .header {
+            background-color: #2f6c2f;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box {
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #2f6c2f;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .content-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2f6c2f;
+            font-size: 20px;
+        }
+
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cell {
+            flex: 1;
+            text-align: left;
+        }
+
+        .cell:last-child {
+            text-align: right;
+        }
+
+        /* Button Styles */
+        .edit-button, .delete-button {
+            background-color: #2f6c2f;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .edit-button:hover {
+            background-color: #3f7d3f;
+        }
+
+        .delete-button:hover {
+            background-color: #e53935;
+        }
+
+        .add-button-container {
+            text-align: right;
+        }
+
+        .add-button {
+            background-color: #2f6c2f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .add-button:hover {
+            background-color: #3f7d3f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="img/icon.jpeg" alt="SmartFarm Icon">
+            </div>
+            <ul class="menu">
+                <li>Pendataan</li>
+                <li>Penandaan</li>
+                <li>Kesehatan</li>
+                <li>Laporan</li>
+                <li>Tentang</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">Pendataan</div>
+
+            <!-- Content Box -->
+            <div class="content-box">
+                <h2>Kelompok Ternak</h2>
+                <div class="table-container">
+                    <!-- Row 1 -->
+                    <div class="table-row">
+                        <div class="cell">Kelompok 1</div>
+                        <div class="cell">
+                            <button class="edit-button">Edit</button>
+                            <button class="delete-button">Hapus</button>
+                        </div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="table-row">
+                        <div class="cell">Kelompok 2</div>
+                        <div class="cell">
+                            <button class="edit-button">Edit</button>
+                            <button class="delete-button">Hapus</button>
+                        </div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="table-row">
+                        <div class="cell">Kelompok 3</div>
+                        <div class="cell">
+                            <button class="edit-button">Edit</button>
+                            <button class="delete-button">Hapus</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Button -->
+                <div class="add-button-container">
+                    <button class="add-button">Tambah</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

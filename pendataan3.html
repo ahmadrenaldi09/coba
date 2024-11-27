@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendataan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inknut Antiqua", serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #2f6c2f;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar .logo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            margin-top: 30px;
+        }
+
+        .sidebar .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar .menu li {
+            margin-left: 50px;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ffffff;
+            width: 200px;
+            cursor: pointer;
+        }
+
+        .sidebar .menu li:hover {
+            background-color: #3f7d3f;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+        }
+
+        .header {
+            background-color: #2f6c2f;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Membawa konten ke tengah secara vertikal */
+            height: calc(100vh - 80px); /* Memastikan area tengah sesuai layar */
+            gap: 50px;
+        }
+
+        .form-section {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .button-group {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #2f6c2f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1;
+            margin: 0 5px;
+        }
+
+        .button-group button:hover {
+            background-color: #3f7d3f;
+        }
+
+        .image-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-section img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="img/icon.jpeg" alt="SmartFarm Icon">
+            </div>
+            <ul class="menu">
+                <li>Pendataan</li>
+                <li>Penandaan</li>
+                <li>Kesehatan</li>
+                <li>Laporan</li>
+                <li>Tentang</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <div class="header">PENDATAAN</div>
+
+            <!-- Content -->
+            <div class="content">
+                <!-- Form Section -->
+                <div class="form-section">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nama">
+                        <input type="text" placeholder="Deskripsi">
+                        <input type="text" placeholder="Informasi Tambahan">
+                    </div>
+                    <!-- Tombol -->
+                    <div class="button-group">
+                        <button>Edit</button>
+                        <button>Hapus</button>
+                    </div>
+                </div>
+
+                <!-- Foto Sapi -->
+                <div class="image-section">
+                    <img src="img/jaya.webp" alt="Cow">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
